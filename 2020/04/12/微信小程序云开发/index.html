@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="referrer" content="origin">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>微信小程序云开发</title>
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/LongCang.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Monda.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/NotoSansSC.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Playball.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/PTMono.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/RobotoSlab.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Rosario.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/UbuntuMono.css">
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css">
+    
+        <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/normal.css">
+    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
+    <a id="cover"></a>
+    <div id="header">
+    <div class="header">
+        <div class="vertical">
+            <div class="inner">
+                <h1 class="header-subtitle">微信小程序云开发</h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2020-04-12
+                        </span>
+                        
+                            <span id="/2020/04/12/微信小程序云开发/" class="leancloud_visitors" data-flag-title="微信小程序云开发">
+                                <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                            </span>
+                        
+                        <span>
+                            <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2020/04/12/微信小程序云开发/"></span>
+                        </span>  
+                    </p>                 
+                </div>
+            </div>
+        </div>
+        <canvas id="articleHeaderCanvas"></canvas>
+    </div>
+</div>
+    <div id="container">
+    <div id="content">
+        <div id="article">
+    <div class="toc"></div>
+    <div class="article-body">
+        <p><a target="_blank" rel="noopener" href="https://coding.imooc.com/class/373.html?mc_marking=3f121027165fd34665da18b6d071da9c&mc_channel=shouji">微信小程序开发</a>已经成为目前最火爆的技能之一，无论是在求职、毕设、兴趣培养等方面都已经成为一项必备技能，而小程序云开发技术的出现更是点燃了整个小程序生态圈。<br>在2019微信公开课PRO小程序分论坛上，腾讯云宣布推出总价值超过10 亿元的“小程序·云开发”资源扶持计划，对超过一百万个小程序开发者提供免费资源扶持，全面助力开发者通过云开发打造优秀的微信小程序。这是继与微信团队联合推出降低开发门槛的“小程序·云开发”产品后，腾讯云在小程序开发成本上再次面向开发者释放红利。<br>那么什么是小程序云开发呢？我们通过对比云开发模式与传统开发模式之间的区别，来解释什么是小程序的云开发。</p>
+<h3 id="小程序云开发与传统开发模式区别？"><a href="#小程序云开发与传统开发模式区别？" class="headerlink" title="小程序云开发与传统开发模式区别？"></a>小程序云开发与传统开发模式区别？</h3><h4 id="小程序传统开发模式"><a href="#小程序传统开发模式" class="headerlink" title="小程序传统开发模式"></a>小程序传统开发模式</h4><p><img src="http://img1.sycdn.imooc.com/5d53a0430001663719581082.png" alt="图片描述"></p>
+<ul>
+<li><p>开发效率低：</p>
+<p>大多数小程序所展示的数据都应该不是在页面上写死的，所以大多数小程序都需要一个服务端，服务端可以用多种技术实现，如PHP、Node.js、Java等。不管使用哪种技术实现服务端，开发一款小程序一般情况下都需要至少配备两个程序员，一个开发小程序前端，一个开发小程序服务端，这样的话这两个程序员之间就需要不断沟通，确认共同遵循的接口。可沟通过程中往往权责不清晰，有很多临界的位置，谁管都可以，容易引发扯皮，沟通成本非常高，导致开发效率下降。同时，由于开发人员的增多，整个开发的成本也会提高。这也是困扰着很多创业型公司的问题。</p>
+</li>
+<li><p>维护成本高：</p>
+<p>项目上线的时候，公司需要自己搭建服务，不仅要花大价钱买机器、买宽带流量，还得请专门的人员去维护。运维人员需要考虑比如数据库运维，文件存储、内容加速、网络防护、容器服务、负载均衡、安全加固等等一系列的问题，这在公司里面是很头疼的一件事。</p>
+</li>
+</ul>
+<h3 id="小程序云开发模式"><a href="#小程序云开发模式" class="headerlink" title="小程序云开发模式"></a>小程序云开发模式</h3><p>小程序云开发是腾讯云和微信团队联合开发的，集成于小程序控制台的原生 Serverless 云服务，为开发者提供完整的原生云端支持和微信服务支持，弱化后端和运维概念，无需搭建服务器，使用平台提供的 API 进行核心业务开发，即可实现快速上线和迭代。只需要一名开发人员就可以完成所有的工作。云开发核心能力包括：云存储、云数据库、云函数、云调用、HTTP API。<img src="http://img1.sycdn.imooc.com/5d53a08f0001187e16561090.png" alt="图片描述"></p>
+<h3 id="区别对比"><a href="#区别对比" class="headerlink" title="区别对比"></a>区别对比</h3><p>传统开发模式</p>
+<ul>
+<li>开发效率低：过多的非业务逻辑需要处理，导致开发效率难以提升</li>
+<li>资源投入高：无论是物理机托管，还是云主机维护，都需要较多的人力物力投入</li>
+<li>产品上线慢：前后端联调、资源存储、部署等操作繁杂，上线流程耗时长</li>
+<li>日常运维难：需时刻关注环境运行状况，管理相关资源，运维难度大</li>
+</ul>
+<p>云开发模式</p>
+<ul>
+<li>高效开发：只需编写核心逻辑代码，内建小程序用户鉴权，无需关注后端配置与部署，专注于业务开发</li>
+<li>节约成本：按请求数和资源的运行收费，极大节约时间和成本，提供一定量免费额度使用</li>
+<li>官方生态：原生集成微信SDK，云相关API开箱即用；同时，通过云调用，可免鉴权直接调用微信开放接口</li>
+<li>稳定可靠：底层资源由腾讯云提供专业支持，满足不同业务场景和需求，具备快速拓展能力，确保服务稳定，数据安全</li>
+</ul>
+<h3 id="前端热词Serverless"><a href="#前端热词Serverless" class="headerlink" title="前端热词Serverless"></a>前端热词Serverless</h3><p>​    在2019年，前端有一个很火的热词，叫做Serverless，server就是服务，less更少的，翻译过来就是无服务开发，而小程序云开发是这种无服务的开发。举个更形象的例子，比如我们想开一场演唱会，之前的做法是需要自己联系场地、灯光、伴奏，而有了云开发以后，相当于是演唱会需要的所有东西都有人帮我们准备好了，我们只需要站在舞台上演唱就可以。<br>   Serverless中有一个概念，叫做 函数即服务，我们在使用云开发来实现小程序后端服务的时候，可以直接调用函数即可，对前端来说，后端服务就是一个函数，整个小程序的前后端逻辑都能在一个IDE里面完成，用户其实完全不用担心到底哪些是服务器的逻辑，后端服务和前端完全的融合在一种代码体系里去了，这样后端的服务即是一个函数，至于这个函数是在前端实现，或者是在后端很远的地方实现，开发者都可以不用关心。所以说，severless打破了物理隔离。开发者不再去做任何隔离中间层的事前，我只需要关心函数的实现就可以了。<br>   所以这种开发模式可以实现真正的全栈技术开发，这对现有的开发模式是一个很大的革新。</p>
+<h3 id="小程序云开发优势"><a href="#小程序云开发优势" class="headerlink" title="小程序云开发优势"></a>小程序云开发优势</h3><ul>
+<li>快速上线项目：快速上线对于公司是非常必要的。很多公司可能已经具备了自己的网站或者APP，但现在小程序如此火爆所以想开发一款小程序，那么小程序·云开发可以帮助你在最短时间上线应用，完成快速试错</li>
+<li>专注核心业务，放弃非核心逻辑：使用云开发以后，你只需编写最重要的“核心代码”，不再需要关心周边组件，极大地降低了服务架构搭建的复杂性，成本更低</li>
+<li>你可以独自完成一个小程序的设计、开发、发布：在传统的开发模式下，你需要一个后端开发者来配合你完成整个小程序的开发。在小程序·云开发中，你只需要借助云开发提供的丰富的 API ，就可以实现数据的存储、文件的上传、结果的计算，大大的提升了工作的效率</li>
+<li>你无需学习一门新的语言：小程序·云开发目前支持 Node.js ，和进行小程序开发时使用的 JavaScript 同出一门，你可以以更低的学习成本来完成小程序的开发</li>
+<li>你无需关注系统运维：当应用上线后，运维就成为了一个大的问题，当海量流量来袭时，如何快速调整系统容量，确保业务的稳步运行就成为了一个问题。当你使用云开发后，云开发将为你接管运维层面的事务，让你更加关注应用本身</li>
+<li>弹性伸缩：在传统的单体开发模式中，应用需要以应用、站点为单位进行伸缩，因为我们的开发是基于整个应用、整个站点进行开发，无法单独对某一个特定的功能进行伸缩。而云开发所采用的 Serverless 方案中的运算部分，是交给云函数来进行处理的，你的应用由一个个函数组成的，因此，在弹性伸缩方面，粒度进一步细化，针对特定功能的函数来进行伸缩，弹性效率更高，能够承载的请求量更大</li>
+<li>数据安全：在云开发模式下，每个用户的环境资源是独立的，也即是私有的，并且云开发提供与自有数据库打通的能力。这样，用户的数据都存在用户自己的云开发环境资源下面，一定层面保障了用户的数据安全与稳定性</li>
+</ul>
+<h3 id="开通云开发"><a href="#开通云开发" class="headerlink" title="开通云开发"></a>开通云开发</h3><ol>
+<li>下载微信开发者工具并安装：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">下载地址</a></li>
+<li>新建项目，后端服务选择小程序云开发<img src="http://img1.sycdn.imooc.com/5d53a2ce0001bc2409360636.png" alt="图片描述"></li>
+<li>新建项目后，点击开发工具上方云开发按钮!<img src="http://img1.sycdn.imooc.com/5d53a30c0001297609380117.png" alt="图片描述"></li>
+<li>点击开通按钮<img src="http://img1.sycdn.imooc.com/5d53a395000161bd09380569.png" alt="图片描述"></li>
+<li>填入环境名称，图中的基础配额完全都是免费的<img src="http://img1.sycdn.imooc.com/5d53a3b20001433809300603.png" alt="图片描述"></li>
+<li>点击确定，开通云开发<img src="http://img1.sycdn.imooc.com/5d53a3e30001410309250562.png" alt="图片描述"></li>
+<li>开通以后，官方给出从时间是十分钟左右就可以开通成功，实际测试其实很快</li>
+</ol>
+<h3 id="云开发提供的五大能力"><a href="#云开发提供的五大能力" class="headerlink" title="云开发提供的五大能力"></a>云开发提供的五大能力</h3><h4 id="1-云函数"><a href="#1-云函数" class="headerlink" title="1.云函数"></a>1.云函数</h4><p>一段运行在云端的代码，无需管理服务器，在开发工具内编写、一键上传部署即可运行后端代码。<br>小程序内提供了专门用于云函数调用的 API。开发者可以在云函数内获取到每次调用的上下文（appid、openid 等），无需维护复杂的鉴权机制，即可获取天然可信任的用户登录态（openid）。<br>开放了运用 Node.js 等框架编写“后端”业务逻辑后，直接可以部署在云平台下，完全不需要去考虑域名、服务器、打包发布、运维等等琐事</p>
+<h4 id="2-云数据库"><a href="#2-云数据库" class="headerlink" title="2.云数据库"></a>2.云数据库</h4><p>云开发提供了一个 JSON 数据库，顾名思义，数据库中的每条记录都是一个 JSON 格式的对象。一个数据库可以有多个集合（相当于关系型数据中的表），集合可看做一个 JSON 数组，数组中的每个对象就是一条记录，记录的格式是 JSON 对象。<br>这样的话，数据库的存储也不用考虑了，直接提供了一个类似于 MongoDB一样的数据库，而且免费的存储空间达到了 2G，一般的项目足够使用了</p>
+<h4 id="3-云存储"><a href="#3-云存储" class="headerlink" title="3.云存储"></a>3.云存储</h4><p>云开发提供了一块文件存储空间，提供了上传文件到云端、带权限管理的云端下载能力，开发者可以在小程序端和云函数端通过 API 使用云文件存储功能。<br>在小程序端可以分别调用 wx.cloud.uploadFile 和 wx.cloud.downloadFile 完成上传和下载云文件操作。<br>这就相当于腾讯直接给你提供了一个静态文件的 CDN，免费的容量直接达到了 5G，一般项目前期是够用的</p>
+<h4 id="4-云调用"><a href="#4-云调用" class="headerlink" title="4.云调用"></a>4.云调用</h4><p>云调用是云开发提供的基于云函数使用小程序开放接口的能力，支持在云函数调用服务端开放接口，如发送模板消息、获取小程序码等操作都可以在云函数中完成</p>
+<h4 id="5-HTTP-API"><a href="#5-HTTP-API" class="headerlink" title="5.HTTP API"></a>5.HTTP API</h4><p>云开发资源也可以通过 HTTP 接口访问，即在小程序外访问。比如你的小程序项目，需要做一个后台管理系统对小程序中的数据和文件进行管理，就可以使用HTTP API来访问云开发当中的资源</p>
+<h3 id="小程序开发适合人群"><a href="#小程序开发适合人群" class="headerlink" title="小程序开发适合人群"></a>小程序开发适合人群</h3><ul>
+<li>打算进入职场，从事前端开发甚至是全栈开发的职场小白</li>
+<li>已经有了一定的前端工作经验，但由于公司业务需要，打算学习小程序开发的技能党</li>
+<li>正在做毕业设计并且想做出精品高质量毕设项目的学生党</li>
+<li>看到小程序开发如此火爆，打算一起尝鲜的达人</li>
+</ul>
+<h3 id="小程序可发学习建议"><a href="#小程序可发学习建议" class="headerlink" title="小程序可发学习建议"></a>小程序可发学习建议</h3><ul>
+<li>多看<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/">官方文档</a>，小程序的官方文档写的非常的全面，涵盖了微信小程序开发的所有知识点，大家一定要多看微信小程序官方文档</li>
+<li>多逛小程序<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/community/develop/question">开发社区</a>，关于微信小程序的新功能以及更新内容都会在社区上面通知，大家遇到技术问题也可以在上面提问，会有微信团队官方工程师帮助我们解答</li>
+<li>多敲代码，多练习。只有自己不断的练习才能真正的得到提高</li>
+<li>分析问题和解决问题的能力。这是需要时间不断积累的，在遇到问题的时候，一定要多思考，对于有错误信息的问题一定要认真翻译错误信息，大多数的错误线索都能够被找到</li>
+</ul>
+
+        <p class="suffix-end">__END__</p>
+        <div class="suffix-box">
+            <div class="suffix-box-left">
+                <img src="/image/tx.JPG" alt="JackeyDawson">
+            </div>
+            <div class="suffix-box-right">
+                <span class="suffix-box-title">文章作者</span>：JackeyDawson
+                <br>
+                <span class="suffix-box-title">文章出处</span>：<a href="/2020/04/12/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91/" target="_blank">微信小程序云开发</a>
+                <br>
+                <span class="suffix-box-title">作者签名</span>：简单地活着, 肆意又精彩.
+                <br>
+                <span class="suffix-box-title">关于主题</span>：<a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - JackeyDawson</a>
+                <br>
+                <span class="suffix-box-title">版权声明</span>：文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+                <br>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <div class="article-footer">
+        
+        
+        <div class="article-prev-next">
+            
+                <a href="/2020/04/22/%E6%8A%84%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B0%A4%E9%9B%A8%E6%BA%AA%E5%9C%A8Vue3-0-Beta%E7%9B%B4%E6%92%AD%E9%87%8C%E8%81%8A%E5%88%B0%E4%BA%86%E8%BF%99%E4%BA%9B%E2%80%A6/" class="prev-prefix">« </a> 上一篇：    <a href="/2020/04/22/%E6%8A%84%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%B0%A4%E9%9B%A8%E6%BA%AA%E5%9C%A8Vue3-0-Beta%E7%9B%B4%E6%92%AD%E9%87%8C%E8%81%8A%E5%88%B0%E4%BA%86%E8%BF%99%E4%BA%9B%E2%80%A6/" title="发布于 2020-04-22 10:39">抄笔记：尤雨溪在Vue3.0 Beta直播里聊到了这些…</a>
+                <br>
+            
+            
+        </div>
+    </div>
+    
+    <div class="article-comments">
+        <div class="comments-title">
+            评论列表
+        </div>
+        <div class="comments-content">
+        </div>
+    </div>
+
+</div>
+
+    </div>
+</div>
+    <div id="footer"></div>
+    <div id="sidebar">
+    <div class="menu-wrap" style="display:none;">
+        <nav class="menu">
+            <div class="menu-introduce"> 
+                <div class="introduce-avatar"></div> 
+                <div class="introduce-info"> 
+                    <div class="introduce-user"><span></span></div>        
+                </div> 
+            </div> 
+            <div class="menu-list">
+                <ul></ul> 
+            </div> 
+            <div class="menu-link"></div> 
+        </nav>
+        <button class="menu-button-close"></button>
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+            </svg>
+        </div>
+    </div>
+    <button class="menu-button-open">MENU</button>
+    <div class="menu-cover"></div>
+</div>
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/iscroll.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/instantsearch.min.js"></script>
+<div class="search-window">
+    <div class="search-content">
+        <div class="search-content-icon">
+            <i class="iconfont icon-search"></i>
+        </div>
+        <div id="search-input" class="search-input"></div>
+    </div>
+
+    <div class="search-scroll">
+        <div class="search-result">
+            <div id="search-stats" class="search-stats"></div>
+            <div id="search-hits"></div>
+            <div id="search-pagination" class="search-pagination"></div>
+        </div>
+    </div>
+
+    <span class="search-close-icon">
+        <i class="iconfont icon-close"></i>
+    </span>
+</div>
+    <div id="tools">
+    <div class="progressbar-top"></div>
+
+    
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js"></script>
+        <meting-js id="3778678" lrcshow="false" server="netease" type="playlist" fixed="true" autoplay="false" loop="all" order="random" preload="auto" volume="0.67" mutex="true"></meting-js>
+    
+    
+    <div class="wrap-right"></div>
+    <div class="loading"></div>
+</div>
+    <script>
+    window.config = {
+        GitHubUserName     : 'JackeyDawson',
+        GitHubRepositories : 'LiveForCode',
+
+        BlogUser      : 'JackeyDawson',
+        BlogAvatar    : '/image/tx.JPG',
+        BlogStartDate : '2020-01-01',
+
+        WebsiteTitleBlur         : 'Hi, JackeyDawson',
+        WebsiteTitleBlurTimeOut  : 500,
+        WebsiteTitleFocus        : '欢迎回来!',
+        WebsiteTitleFocusTimeOut : 1000,
+        WebsiteFavicon           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/website/logo.png',
+
+        ProgressBar: {
+            id       : 'topProgressBar',
+            color    : '#77B6FF',
+            height   : '2px',
+            duration : 0.2
+        },
+
+        Loading: {
+            rebound: {
+                tension  : 16,
+                friction : 5
+            },
+            spinner: {
+                id     : 'spinner',
+                radius : 90,
+                sides  : 3,
+                depth  : 4,
+                colors : {
+                    background : '#F0F0F0',
+                    stroke     : '#272633',
+                    base       : '',
+                    child      : '#272633'
+                },
+                alwaysForward : true,
+                restAt        : 0.5,
+                renderBase    : false
+            }
+        },
+
+        HomeHeaderAnimationRendered : true,
+        HomeHeaderAnimation         : {
+            radius      : 15,
+            density     : 0.2,
+            color       : 'rgba(255, 255, 255, .2)',
+            clearOffset : 0.3
+        },
+
+        ArticleHeaderAnimationRendered : false,
+        ArticleHeaderAnimation         : {
+            triW                  : 14,
+            triH                  : 20,
+            neighbours            : [
+                
+                    'side',
+                
+                    'top',
+                
+                    'bottom',
+                
+            ],
+            speedTrailAppear      : 0.1,
+            speedTrailDisappear   : 0.1,
+            speedTriOpen          : 1,
+            trailMaxLength        : 30,
+            trailIntervalCreation : 100,
+            delayBeforeDisappear  : 2,
+            colors                : [
+                
+                    '#96EDA6',
+                
+                    '#5BC6A9',
+                
+                    '#38668C',
+                
+                    '#374D84',
+                
+                    '#BED5CB',
+                
+                    '#62ADC6',
+                
+                    '#8EE5DE',
+                
+                    '#304E7B',
+                
+            ]
+        },
+
+        BackAnimationRendered          : true,
+        IEBrowserBackAnimationRendered : false,
+        BackAnimation                  : {
+            colorSaturation  : '60%',
+            colorBrightness  : '50%',
+            colorAlpha       : 0.5,
+            colorCycleSpeed  : 5,
+            verticalPosition : 'random',
+            horizontalSpeed  : 200,
+            ribbonCount      : 3,
+            strokeSize       : 0,
+            parallaxAmount   : -0.2,
+            animateSections  : true
+        },
+
+        HomeHeaderImage : [
+            
+                '/image/bg.jpg',
+            
+        ],
+        HomeBannerText  : '',
+
+        ArticleHeaderImage : [
+            
+                'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/article.jpg',
+            
+        ],
+
+        OtherBannerText : '',
+
+        MenuList : [
+            
+                {
+                    name   : '首页',
+                    href   : '/',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '标签',
+                    href   : '/tag',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '分类',
+                    href   : '/category',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '归档',
+                    href   : '/archive',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '赞赏',
+                    href   : '/donate',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '关于',
+                    href   : '/about',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '订阅',
+                    href   : '/atom.xml',    
+                    target : '_blank',
+                    class  : ''
+                },
+            
+                {
+                    name   : '搜索',
+                    href   : '',    
+                    target : '',
+                    class  : 'search'
+                },
+            
+                {
+                    name   : '留言板',
+                    href   : '/comment',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '友情链接',
+                    href   : '/friend',    
+                    target : '',
+                    class  : ''
+                },
+            
+        ],
+        MenuLink : [
+            
+                
+                    {
+                        icon : 'icon-weibo', 
+                        url  : ''
+                    },
+                
+                    {
+                        icon : 'icon-wechat', 
+                        url  : ''
+                    },
+                
+                    {
+                        icon : 'icon-qq', 
+                        url  : ''
+                    },
+                
+                    {
+                        icon : 'icon-github', 
+                        url  : 'https://github.com/first19326'
+                    },
+                
+            
+        ],
+
+        FooterStyle : 2,
+        BottomText  : {
+            icon    : 'like-fill',
+            left    : '人生若只如初见',
+            right   : '何事秋风悲画扇'
+        },
+        ThemeInfo   : true,
+
+        ConsoleList : [
+            
+                
+                    [
+                        
+                            
+                                'Based on cnblogs theme SimpleMemory.',
+                            
+                                '',
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                'SimpleMemory Author:',
+                            
+                                'BNDong',
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                'Theme:',
+                            
+                                'LiveForCode',
+                            
+                        
+                    ],
+                
+            
+        ],
+
+        FontIconExtend : '',
+
+        Donate : {
+            paypal  : '',
+            bitcoin : '',
+            alipay  : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/alipay.png',
+            wechat  : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/wechat.png'
+        },
+
+        Code : {
+            style : 'normal'
+        },  
+
+        Search : {
+            applicationID : '010C3EANT8',
+            apiKey        : 'c7abab9f11b79102b9aff7fe6d41447d',
+            indexName     : 'Notes',
+            hits          : {
+                page : 10
+            },
+            labels        : {
+                placeholder : '搜索',
+                empty       : '未发现与 「${query}」 相关的内容',
+                stats       : '${hits} 条相关条目，使用了 ${time} 毫秒',
+            }
+        }, 
+
+        Valine : {
+            switch         : true,
+            el             : '.comments-content',
+            appId          : 'srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz',
+            appKey         : '8uVSP1q6UlALVC5igYfIfv2h',
+            placeholder    : '你是我一生只会遇见一次的惊喜...',
+            avatar         : 'mm',
+            meta           : 'nick,mail,link',
+            requiredFields : 'nick,mail',
+            pageSize       : 5,
+            lang           : 'zh-cn',
+            visitor        : true,
+            enableQQ       : true
+        },
+
+        Tocbot : {
+            switch                : true,
+            tocSelector           : '.toc',
+            contentSelector       : '.article-body',
+            headingSelector       : 'h1, h2, h3, h4, h5',
+            headingsOffset        : 0,
+            scrollSmooth          : true,
+            scrollSmoothOffset    : -5,
+            positionFixedSelector : '.toc',
+            positionFixedClass    : 'toc-fixed',
+            fixedSidebarOffset    : '',
+        },
+
+        Require : {
+            baseUrl     : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/',
+            waitSeconds : 100
+        },
+
+        Music : {
+            type : 'Meting'
+        },
+        APlayer : {
+            container : '.aplayer',
+            fixed     : true,
+            autoplay  : false,
+            loop      : 'all',
+            order     : 'random',
+            preload   : 'auto',
+            volume    : 0.67,
+            mutex     : true,
+            lrcType   : 3,
+            audio     : [
+                
+                    {
+                        name   : 'aLIEz',
+                        artist : 'mizuki（瑞葵）',
+                        cover  : '/music/cover/aLIEz.jpg',
+                        url    : '/music/song/aLIEz.mp3',
+                        lrc    : '/music/lrc/aLIEz.lrc'
+                    },
+                
+                    {
+                        name   : 'Endless Tears',
+                        artist : 'CLIFF EDGE',
+                        cover  : '/music/cover/Endless Tears.jpg',
+                        url    : '/music/song/Endless Tears.mp3',
+                        lrc    : '/music/lrc/Endless Tears.lrc'
+                    },
+                
+                    {
+                        name   : 'Miracle',
+                        artist : 'Cascada',
+                        cover  : '/music/cover/Miracle.jpg',
+                        url    : '/music/song/Miracle.mp3',
+                        lrc    : '/music/lrc/Miracle.lrc'
+                    },
+                
+                    {
+                        name   : 'Roll The Dice',
+                        artist : '高珊',
+                        cover  : '/music/cover/Roll The Dice.jpg',
+                        url    : '/music/song/Roll The Dice.mp3',
+                        lrc    : '/music/lrc/Roll The Dice.lrc'
+                    },
+                
+                    {
+                        name   : 'See You Again',
+                        artist : 'Charlie Puth, Wiz Khalifa',
+                        cover  : '/music/cover/See You Again.jpg',
+                        url    : '/music/song/See You Again.mp3',
+                        lrc    : '/music/lrc/See You Again.lrc'
+                    },
+                
+                    {
+                        name   : 'Traveling Light',
+                        artist : 'Joel Hanson, Sara Groves',
+                        cover  : '/music/cover/Traveling Light.jpg',
+                        url    : '/music/song/Traveling Light.mp3',
+                        lrc    : '/music/lrc/Traveling Light.lrc'
+                    },
+                
+                    {
+                        name   : '痴心绝对',
+                        artist : '李圣杰',
+                        cover  : '/music/cover/痴心绝对.jpg',
+                        url    : '/music/song/痴心绝对.mp3',
+                        lrc    : '/music/lrc/痴心绝对.lrc'
+                    },
+                
+                    {
+                        name   : '好想大声说爱你',
+                        artist : 'BAAD（バード）',
+                        cover  : '/music/cover/好想大声说爱你.jpg',
+                        url    : '/music/song/好想大声说爱你.mp3',
+                        lrc    : '/music/lrc/好想大声说爱你.lrc'
+                    },
+                
+            ]
+        },
+        Meting : {
+            id       : '3778678', 
+            lrcshow  : false, 
+            server   : 'netease', 
+            type     : 'playlist', 
+            fixed    : true, 
+            autoplay : false, 
+            loop     : 'all', 
+            order    : 'random', 
+            preload  : 'auto', 
+            volume   : 0.67, 
+            mutex    : true
+        },
+
+        LazyLoad : {
+            default : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/website/lazyload.svg'
+        },
+  
+        Style : {
+            aplayer          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/APlayer.css',
+            archive          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/archive.css',
+            donate           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/donate.css',
+            fancybox         : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/jquery.fancybox.css',
+            footer           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/footer.css',
+            iconfont         : 'https://at.alicdn.com/t/font_1546312_l3yohatebw.css',
+            index            : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/index.css',
+            menuBubble       : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/menu-bubble.css',
+            page             : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/page.css',
+            post             : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css',
+            search           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css',
+            tocbot           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/tocbot.css',
+            normal           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/normal.css',
+            night            : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/night.css',
+            clipboard        : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/clipboard.css'
+        },
+
+        Script: {
+            aplayer          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/APlayer.min.js',
+            config           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.config.js',
+            index            : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/index.js',
+            instantSearch    : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/instantsearch.min.js',
+            jQuery           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js',
+            loading          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/loading.js',
+            meting           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js',
+            iscroll          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/iscroll.js',
+            require          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.min.js'
+        },
+
+        Font: {
+            LongCang   : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/LongCang.css',
+            Monda      : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Monda.css',
+            NotoSansSC : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/NotoSansSC.css',
+            Playball   : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Playball.css',
+            PTMono     : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/PTMono.css',
+            RobotoSlab : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/RobotoSlab.css',
+            Rosario    : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Rosario.css',
+            UbuntuMono : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/UbuntuMono.css'
+        },
+
+        Suffix : {
+            about : '简单地活着, 肆意又精彩.'
+        },
+            
+        Theme : {
+            url  : 'https://github.com/first19326/Hexo-LiveForCode',
+            name : 'Hexo - JackeyDawson'
+        }  
+    };
+</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/index.js"></script>
+</body>
+</html>
